@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Card Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>ID Card Generator</h1>
+        <form id="idCardForm">
+            <input type="text" id="fullName" placeholder="Full Name" required>
+            <input type="text" id="course" placeholder="Course Program" required>
+            <input type="text" id="idNumber" placeholder="ID Number" required>
+            <input type="file" id="idPicture" accept="image/*" required>
+            <button type="submit" id="generateButton">Generate ID Card</button>
+        </form>
+
+        <div class="id-card" id="idCard" style="display:none;">
+            <img id="templateImage" src="Image/458193791_813537957613516_5006241028438039135_n.png" alt="ID Card Template" style="width: 100%; height: auto;"/>
+            <img id="profilePicture" src="" alt="Profile Picture" />
+            <h2 id="nameDisplay"></h2>
+            <p id="courseDisplay"></p>
+            <p id="idNumberDisplay"></p>
+        </div>
+
+        <button id="downloadButton" style="display:none;">Download ID Card</button>
+
+    
+        <div class="id-history" id="idHistory">
+            <h2>Generated ID History</h2>
+            <div id="historyList"></div>
+        </div>
+    </div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
